@@ -1,1 +1,10 @@
 %h1 this is the index page
+
+- @articles.each do |article|
+  %p
+    Article title:
+    =article.title
+
+  %p
+    Article body:
+    =article.body
