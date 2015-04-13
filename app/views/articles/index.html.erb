@@ -1,1 +1,9 @@
 <h1> this is the index page </h1>
+
+<% @articles.each do |article| %>
+<h3><%=article.title %></h3>
+<p><%= article.body %></p>
+<p><%= link_to 'Delete this article', article_path(article), method: :delete,
+  data: {confirm: "Are you sure?"} %></p>
+
+<% end %>
